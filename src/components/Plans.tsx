@@ -55,6 +55,12 @@ export default function Plans() {
                 <span className="text-3xl font-extrabold text-white">S/ {tier.prices[billing]}</span>
                 {billing !== "unico" && <span className="text-xs text-ink-400">/ {billing === "mensual" ? "mes" : "año"}</span>}
               </div>
+              <p className="mt-1.5 text-[11px] text-ink-400">
+                {billing === "unico" && "Pagas una sola vez — tuyo para siempre, sin mensualidades."}
+                {billing === "mensual" && "Se renueva cada mes — cancela cuando quieras, sin permanencia."}
+                {billing === "anual" &&
+                  `Se renueva cada año — ahorras S/ ${tier.prices.mensual * 12 - tier.prices.anual} frente a pagar mes a mes.`}
+              </p>
 
               <a
                 href="#contacto"
