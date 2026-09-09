@@ -57,6 +57,7 @@ export const tiers: Tier[] = [
       "Reportes avanzados: rentabilidad, propinas, desempeño por empleado",
       "Roles y permisos de empleados",
       "Sincronización en tiempo real entre varios equipos o sucursales",
+      "Directorio de sucursales: encargado por local, estadísticas y login filtrado por sucursal",
     ],
   },
   {
@@ -66,6 +67,7 @@ export const tiers: Tier[] = [
     prices: { unico: 999, mensual: 119, anual: 1190 },
     includesPrevious: true,
     features: [
+      "Finanzas: contabilidad, estados financieros, ratios y producción",
       "Asistente de negocio con IA conversacional",
       "Respaldo automático en la nube",
       "Reabastecimiento predictivo de inventario",
