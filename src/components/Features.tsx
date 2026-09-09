@@ -11,6 +11,7 @@ import {
   Printer,
   Share2,
   Receipt,
+  Landmark,
 } from "lucide-react";
 import Reveal from "./Reveal";
 
@@ -22,7 +23,8 @@ const FEATURES = [
   { icon: Receipt, title: "Boletas y ticket", desc: "Comprobantes con tu logo, impresión térmica USB, red o Bluetooth." },
   { icon: Users, title: "Clientes y empleados", desc: "Roles y permisos por empleado, historial de clientes." },
   { icon: BarChart3, title: "Reportes", desc: "Rentabilidad, propinas y desempeño por empleado, exportables a Excel/PDF." },
-  { icon: Share2, title: "Multi-sucursal", desc: "Sincronización en tiempo real de stock y ventas entre varios equipos." },
+  { icon: Landmark, title: "Finanzas", desc: "Contabilidad, estados financieros, ratios y producción — exportables por sección." },
+  { icon: Share2, title: "Multi-sucursal", desc: "Directorio de sucursales compartido, login filtrado por local y sincronización de stock y ventas en tiempo real." },
   { icon: Cloud, title: "Respaldo en la nube", desc: "Copia de seguridad automática de tu catálogo, ventas y clientes." },
   { icon: Bot, title: "Asistente con IA", desc: "Resuelve dudas de tu negocio y sugiere decisiones en lenguaje natural." },
   { icon: QrCode, title: "Carta con QR", desc: "Tus clientes ven el menú desde su celular escaneando un código." },
