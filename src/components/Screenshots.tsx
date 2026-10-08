@@ -1,13 +1,13 @@
 import Reveal from "./Reveal";
 import DeviceFrame from "./mockups/DeviceFrame";
-import VentasMockup from "./mockups/VentasMockup";
-import MesasMockup from "./mockups/MesasMockup";
-import ReportesMockup from "./mockups/ReportesMockup";
+import posShot from "../assets/screenshots/pos.png";
+import mesasShot from "../assets/screenshots/mesas.png";
+import reportesShot from "../assets/screenshots/reportes.png";
 
 const SCREENS = [
-  { label: "Ventas — Terminal POS", Mockup: VentasMockup },
-  { label: "Mesas en vivo", Mockup: MesasMockup },
-  { label: "Reportes y rentabilidad", Mockup: ReportesMockup },
+  { label: "Ventas — Terminal POS", src: posShot, alt: "Punto de venta de VentaPro con catálogo y carrito" },
+  { label: "Mesas en vivo", src: mesasShot, alt: "Mapa de mesas en vivo de VentaPro" },
+  { label: "Reportes y rentabilidad", src: reportesShot, alt: "Reportes de ventas y rentabilidad de VentaPro" },
 ];
 
 export default function Screenshots() {
@@ -20,10 +20,10 @@ export default function Screenshots() {
         </Reveal>
 
         <div className="mt-12 grid grid-cols-1 gap-6 lg:grid-cols-3">
-          {SCREENS.map(({ label, Mockup }, i) => (
+          {SCREENS.map(({ label, src, alt }, i) => (
             <Reveal key={label} delay={i * 120} className="hover-lift">
               <DeviceFrame label={label}>
-                <Mockup />
+                <img src={src} alt={alt} className="w-full rounded-lg border border-white/5" loading="lazy" />
               </DeviceFrame>
             </Reveal>
           ))}

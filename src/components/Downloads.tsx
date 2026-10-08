@@ -44,12 +44,12 @@ export default function Downloads() {
             {DEMO_INSTALLER_URL ? (
               <a
                 href={DEMO_INSTALLER_URL}
-                className="mt-5 flex w-fit items-center gap-2 rounded-xl bg-brand-500 px-5 py-3 text-sm font-bold text-ink-950 transition hover:bg-brand-400"
+                className="mx-auto mt-5 flex w-fit items-center gap-2 rounded-xl bg-brand-500 px-5 py-3 text-sm font-bold text-ink-950 transition hover:bg-brand-400"
               >
                 <Download size={16} /> Descargar demo (.exe)
               </a>
             ) : (
-              <p className="mt-5 flex items-center gap-2 rounded-xl border border-amber-accent/20 bg-amber-accent/10 px-4 py-3 text-xs text-amber-accent">
+              <p className="mx-auto mt-5 flex w-fit items-center gap-2 rounded-xl border border-amber-accent/20 bg-amber-accent/10 px-4 py-3 text-xs text-amber-accent">
                 <ShieldAlert size={14} /> Enlace de descarga pendiente de configurar
               </p>
             )}
@@ -67,12 +67,12 @@ export default function Downloads() {
             {MOBILE_APK_URL ? (
               <a
                 href={MOBILE_APK_URL}
-                className="mt-5 flex w-fit items-center gap-2 rounded-xl bg-violet-accent px-5 py-3 text-sm font-bold text-ink-950 transition hover:opacity-90"
+                className="mx-auto mt-5 flex w-fit items-center gap-2 rounded-xl bg-violet-accent px-5 py-3 text-sm font-bold text-ink-950 transition hover:opacity-90"
               >
                 <Download size={16} /> Descargar app (.apk)
               </a>
             ) : (
-              <p className="mt-5 flex items-center gap-2 rounded-xl border border-amber-accent/20 bg-amber-accent/10 px-4 py-3 text-xs text-amber-accent">
+              <p className="mx-auto mt-5 flex w-fit items-center gap-2 rounded-xl border border-amber-accent/20 bg-amber-accent/10 px-4 py-3 text-xs text-amber-accent">
                 <ShieldAlert size={14} /> Enlace de descarga pendiente de configurar
               </p>
             )}
