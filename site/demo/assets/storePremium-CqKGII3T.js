@@ -1,0 +1,1 @@
+function e(e){return!1}async function t(){return{ok:!1,message:`La compra de Premium desde Microsoft Store estará disponible pronto.`}}export{t as n,e as t};
