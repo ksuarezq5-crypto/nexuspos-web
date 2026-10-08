@@ -52,7 +52,7 @@ export default function Plans() {
               <p className="mt-1 text-xs text-ink-300">{tier.tagline}</p>
 
               <div className="mt-5 flex items-baseline gap-1.5">
-                <span className="text-3xl font-extrabold text-white">S/ {tier.prices[billing]}</span>
+                <span className="text-3xl font-extrabold text-white">S/ {tier.prices[billing].toLocaleString("es-PE")}</span>
                 {billing !== "unico" && <span className="text-xs text-ink-400">/ {billing === "mensual" ? "mes" : "año"}</span>}
               </div>
               <p className="mt-1.5 text-[11px] text-ink-400">

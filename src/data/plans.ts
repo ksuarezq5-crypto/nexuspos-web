@@ -30,7 +30,7 @@ export const tiers: Tier[] = [
     id: "basico",
     name: "Básico",
     tagline: "Para empezar a vender rápido",
-    prices: { unico: 349, mensual: 39, anual: 390 },
+    prices: { unico: 1190, mensual: 99, anual: 990 },
     includesPrevious: false,
     features: [
       "Punto de venta con carrito y checkout rápido",
@@ -52,7 +52,7 @@ export const tiers: Tier[] = [
     id: "intermedio",
     name: "Intermedio",
     tagline: "Para negocios que ya crecen",
-    prices: { unico: 599, mensual: 69, anual: 690 },
+    prices: { unico: 2190, mensual: 179, anual: 1790 },
     includesPrevious: true,
     highlighted: true,
     features: [
@@ -67,7 +67,7 @@ export const tiers: Tier[] = [
     id: "avanzado",
     name: "Avanzado",
     tagline: "Automatización e IA para escalar",
-    prices: { unico: 999, mensual: 119, anual: 1190 },
+    prices: { unico: 3490, mensual: 279, anual: 2790 },
     includesPrevious: true,
     features: [
       "Finanzas: contabilidad, estados financieros, ratios y producción",
