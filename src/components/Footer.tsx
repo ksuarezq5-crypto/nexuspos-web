@@ -16,7 +16,7 @@ export default function Footer() {
             <span className="flex h-7 w-7 items-center justify-center rounded-lg bg-gradient-to-br from-brand-400 to-brand-600">
               <Zap size={14} className="text-ink-950" />
             </span>
-            NexusPOS
+            VentaPro
           </div>
           <p className="mt-3 max-w-xs text-[13px] leading-relaxed text-ink-400">
             Sistema de punto de venta para restaurantes y negocios retail — pensado para funcionar rápido, con o sin
@@ -53,7 +53,7 @@ export default function Footer() {
       </div>
 
       <div className="mx-auto mt-10 max-w-6xl border-t border-white/5 pt-6 text-center text-xs text-ink-500 sm:text-left">
-        © {new Date().getFullYear()} NexusPOS. Todos los derechos reservados.
+        © {new Date().getFullYear()} VentaPro. Todos los derechos reservados.
       </div>
     </footer>
   );

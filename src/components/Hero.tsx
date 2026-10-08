@@ -1,5 +1,5 @@
 import { useRef, useState } from "react";
-import { ArrowRight, Download } from "lucide-react";
+import { Download, PlayCircle } from "lucide-react";
 import Reveal from "./Reveal";
 import DeviceFrame from "./mockups/DeviceFrame";
 import DashboardMockup from "./mockups/DashboardMockup";
@@ -74,16 +74,18 @@ export default function Hero() {
         <Reveal delay={300}>
           <div className="mt-9 flex flex-col items-center justify-center gap-3 sm:flex-row">
             <a
-              href="#descargas"
+              href="/demo/index.html"
+              target="_blank"
+              rel="noopener"
               className="shine flex w-full items-center justify-center gap-2 rounded-xl bg-brand-500 px-6 py-3.5 text-sm font-bold text-ink-950 transition hover:-translate-y-0.5 hover:bg-brand-400 hover:shadow-lg hover:shadow-brand-500/20 sm:w-auto"
             >
-              <Download size={16} /> Descargar demo gratis
+              <PlayCircle size={16} /> Probar demo en línea
             </a>
             <a
-              href="#planes"
+              href="#descargas"
               className="flex w-full items-center justify-center gap-2 rounded-xl border border-white/10 bg-white/5 px-6 py-3.5 text-sm font-bold text-ink-100 transition hover:-translate-y-0.5 hover:bg-white/10 sm:w-auto"
             >
-              Ver planes <ArrowRight size={16} />
+              <Download size={16} /> Descargar demo
             </a>
           </div>
         </Reveal>
@@ -98,7 +100,7 @@ export default function Hero() {
               transition: "transform 0.2s ease-out",
             }}
           >
-            <DeviceFrame label="NexusPOS — vista previa">
+            <DeviceFrame label="VentaPro — vista previa">
               <DashboardMockup />
             </DeviceFrame>
           </div>

@@ -1,4 +1,4 @@
-import { Monitor, Smartphone, Download, ShieldAlert } from "lucide-react";
+import { Monitor, Smartphone, Download, ShieldAlert, PlayCircle } from "lucide-react";
 import { DEMO_INSTALLER_URL, MOBILE_APK_URL } from "../config";
 import Reveal from "./Reveal";
 
@@ -11,12 +11,32 @@ export default function Downloads() {
           <p className="mt-3 text-ink-300">Disponible para PC (Windows) y como app complementaria para Android.</p>
         </Reveal>
 
-        <div className="mt-12 grid grid-cols-1 gap-5 md:grid-cols-2">
+        <Reveal className="hover-lift glass-card mx-auto mt-10 flex max-w-3xl flex-col items-center gap-4 rounded-3xl p-7 text-center sm:flex-row sm:text-left">
+          <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-brand-500/15 text-brand-400">
+            <PlayCircle size={20} />
+          </div>
+          <div className="flex-1">
+            <h3 className="text-lg font-bold text-white">¿No quieres instalar nada todavía?</h3>
+            <p className="mt-1 text-[13px] leading-relaxed text-ink-300">
+              Prueba VentaPro directo en tu navegador, sin descargar ni instalar — misma interfaz, datos de ejemplo.
+            </p>
+          </div>
+          <a
+            href="/demo/index.html"
+            target="_blank"
+            rel="noopener"
+            className="shine flex w-full shrink-0 items-center justify-center gap-2 rounded-xl bg-brand-500 px-5 py-3 text-sm font-bold text-ink-950 transition hover:bg-brand-400 sm:w-auto"
+          >
+            <PlayCircle size={16} /> Probar demo en línea
+          </a>
+        </Reveal>
+
+        <div className="mt-8 grid grid-cols-1 gap-5 md:grid-cols-2">
           <Reveal className="hover-lift glass-card rounded-3xl p-7">
             <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-brand-500/15 text-brand-400">
               <Monitor size={20} />
             </div>
-            <h3 className="mt-4 text-lg font-bold text-white">NexusPOS para PC (Windows)</h3>
+            <h3 className="mt-4 text-lg font-bold text-white">VentaPro para PC (Windows)</h3>
             <p className="mt-2 text-[13px] leading-relaxed text-ink-300">
               La versión demo incluye todas las funciones con un límite de ventas de prueba. Ideal para conocer el
               sistema antes de activar tu licencia.
@@ -39,7 +59,7 @@ export default function Downloads() {
             <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-violet-accent/15 text-violet-accent">
               <Smartphone size={20} />
             </div>
-            <h3 className="mt-4 text-lg font-bold text-white">NexusPOS Móvil (Android)</h3>
+            <h3 className="mt-4 text-lg font-bold text-white">VentaPro Móvil (Android)</h3>
             <p className="mt-2 text-[13px] leading-relaxed text-ink-300">
               Complementa tu PC desde el celular. Al instalarlo, activa "Orígenes desconocidos" en tu Android para
               poder abrir el archivo .apk.

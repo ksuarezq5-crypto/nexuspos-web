@@ -19,7 +19,7 @@ export default function Nav() {
           <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-to-br from-brand-400 to-brand-600">
             <Zap size={16} className="text-ink-950" />
           </span>
-          NexusPOS
+          VentaPro
         </a>
 
         <nav className="hidden items-center gap-8 md:flex">
@@ -35,10 +35,12 @@ export default function Nav() {
         </nav>
 
         <a
-          href="#descargas"
+          href="/demo/index.html"
+          target="_blank"
+          rel="noopener"
           className="shine hidden rounded-xl bg-brand-500 px-4 py-2 text-sm font-bold text-ink-950 transition hover:bg-brand-400 md:inline-block"
         >
-          Descargar demo
+          Probar demo
         </a>
 
         <button
@@ -64,11 +66,13 @@ export default function Nav() {
               </a>
             ))}
             <a
-              href="#descargas"
+              href="/demo/index.html"
+              target="_blank"
+              rel="noopener"
               onClick={() => setOpen(false)}
               className="mt-2 rounded-xl bg-brand-500 px-4 py-2.5 text-center text-sm font-bold text-ink-950"
             >
-              Descargar demo
+              Probar demo
             </a>
           </nav>
         </div>
