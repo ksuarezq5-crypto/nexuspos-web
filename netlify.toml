@@ -1,0 +1,9 @@
+[build]
+  command = ""
+  publish = "site"
+
+[[redirects]]
+  from = "/demo"
+  to = "/demo/"
+  status = 301
+
