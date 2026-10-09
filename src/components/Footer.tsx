@@ -52,8 +52,11 @@ export default function Footer() {
         </div>
       </div>
 
-      <div className="mx-auto mt-10 max-w-6xl border-t border-white/5 pt-6 text-center text-xs text-ink-500 sm:text-left">
-        © {new Date().getFullYear()} VentaPro. Todos los derechos reservados.
+      <div className="mx-auto mt-10 flex max-w-6xl flex-col items-center justify-between gap-3 border-t border-white/5 pt-6 text-xs text-ink-500 sm:flex-row sm:text-left">
+        <span>© {new Date().getFullYear()} VentaPro. Todos los derechos reservados.</span>
+        <a href="/privacidad.html" className="text-ink-400 transition hover:text-white">
+          Política de privacidad
+        </a>
       </div>
     </footer>
   );

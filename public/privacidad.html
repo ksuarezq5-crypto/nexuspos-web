@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>VentaPro · Política de privacidad</title>
+<style>
+  :root { color-scheme: dark; }
+  * { box-sizing: border-box; }
+  html, body {
+    margin: 0;
+    background: #06070a;
+    background-image:
+      radial-gradient(1200px 800px at 10% -10%, rgba(28,174,112,0.14), transparent 60%),
+      radial-gradient(1000px 700px at 100% 0%, rgba(139,92,246,0.10), transparent 55%);
+    background-attachment: fixed;
+    color: #dde1ea;
+    font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 760px; margin: 0 auto; padding: 56px 20px 80px; }
+  a { color: #3fc98b; }
+  header { margin-bottom: 36px; }
+  .logo { width: 44px; height: 44px; border-radius: 12px; background: linear-gradient(135deg, #3fc98b, #0f8d5b); display: flex; align-items: center; justify-content: center; font-weight: 800; color: #06070a; font-size: 18px; margin-bottom: 18px; }
+  h1 { font-size: 28px; font-weight: 800; color: #fff; margin: 0 0 6px; letter-spacing: -0.3px; }
+  .updated { font-size: 13px; color: #8891a6; }
+  h2 { font-size: 18px; font-weight: 700; color: #fff; margin: 40px 0 10px; }
+  p, li { font-size: 14.5px; color: #c2c8d6; }
+  ul { padding-left: 20px; margin: 10px 0; }
+  li { margin: 6px 0; }
+  .card { background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.07); border-radius: 16px; padding: 18px 20px; margin: 18px 0; }
+  code { background: rgba(255,255,255,0.08); padding: 1px 6px; border-radius: 5px; font-size: 13px; }
+  footer { margin-top: 56px; padding-top: 24px; border-top: 1px solid rgba(255,255,255,0.07); font-size: 12.5px; color: #58627a; text-align: center; }
+  .back { display: inline-block; margin-top: 10px; font-size: 13.5px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="logo">V</div>
+    <h1>Política de privacidad de VentaPro</h1>
+    <p class="updated">Última actualización: 9 de octubre de 2026</p>
+  </header>
+
+  <p>
+    VentaPro (también distribuido como <strong>NexusPOS</strong>) es un sistema de punto de venta para bodegas,
+    restaurantes y peluquerías, desarrollado por <strong>KS Systems &amp; Innovations</strong>. Esta página explica
+    qué datos maneja la aplicación, con qué propósito y qué opciones tienes sobre ellos.
+  </p>
+
+  <h2>1. Quién controla tus datos</h2>
+  <p>
+    VentaPro es un software que instalas en tu propio negocio. <strong>Tú (el negocio que usa VentaPro) eres el
+    responsable de los datos</strong> que registras en el sistema (productos, clientes, empleados, ventas). KS
+    Systems &amp; Innovations actúa como proveedor del software y, cuando activas funciones en la nube, como
+    encargado técnico del almacenamiento de esa información.
+  </p>
+
+  <h2>2. Qué información se recopila</h2>
+  <div class="card">
+    <ul>
+      <li><strong>Datos que tú ingresas</strong>: productos e inventario, nombres y contacto de tus clientes y
+        proveedores, registros de ventas, empleados y sus horarios/comisiones.</li>
+      <li><strong>Licencia de activación</strong>: tu código de activación y el estado de tu membresía (plan,
+        vencimiento), para verificar que tu instalación es válida.</li>
+      <li><strong>Confirmación automática de pagos Yape</strong> (opcional): si activas esta función en tu celular,
+        la app lee el texto de la notificación de pago de Yape (monto, nombre del remitente) para confirmar el cobro
+        en el punto de venta. No accede a ninguna otra notificación ni a tu cuenta bancaria.</li>
+      <li><strong>Respaldo en la nube</strong> (opcional): si lo activas, una copia de tu catálogo, ventas y clientes
+        se guarda cifrada en nuestra base de datos para que puedas restaurarla o sincronizarla entre tus equipos.</li>
+      <li><strong>Tickets de soporte</strong>: si nos escribes desde la app, guardamos tu mensaje y los datos de
+        contacto que nos compartas para poder responderte.</li>
+      <li><strong>Datos técnicos mínimos</strong>: registros de error locales en tu equipo, usados solo para
+        diagnosticar fallas — no se envían a nuestros servidores salvo que tú los compartas manualmente al pedir
+        soporte.</li>
+    </ul>
+  </div>
+  <p>VentaPro <strong>no</strong> recopila datos de navegación, no usa cookies de rastreo publicitario y no vende
+    información a terceros.</p>
+
+  <h2>3. Con quién se comparte</h2>
+  <ul>
+    <li><strong>Supabase</strong> (hosting de base de datos en la nube) — almacena los datos de activación,
+      respaldo, Yape y soporte cuando usas esas funciones.</li>
+    <li><strong>Proveedor de IA que tú elijas</strong> (Claude, Gemini o un modelo local) — solo si usas el
+      Asistente de negocio con IA, y solo recibe la consulta puntual que le haces, no tu base de datos completa.</li>
+    <li><strong>Resend</strong> — para enviarte avisos por correo de vencimiento de licencia.</li>
+    <li><strong>Firebase Cloud Messaging (FCM)</strong> — para notificaciones push en la app móvil (p. ej. aviso de
+      pago Yape recibido).</li>
+  </ul>
+  <p>Ninguno de estos proveedores usa tus datos para publicidad. Los datos de un negocio nunca se comparten con
+    otro negocio distinto que use VentaPro.</p>
+
+  <h2>4. Cuánto tiempo se conservan</h2>
+  <p>
+    Mientras tu licencia esté activa, conservamos los datos necesarios para que el sistema funcione (activación,
+    respaldo si lo activaste, tickets de soporte). Si dejas de usar VentaPro y quieres que eliminemos tu información
+    de nuestros servidores, escríbenos y la borraremos en un plazo razonable, salvo lo que debamos conservar por
+    obligación legal o contable.
+  </p>
+
+  <h2>5. Tus opciones y derechos</h2>
+  <ul>
+    <li>Puedes usar VentaPro completamente <strong>sin conexión</strong> y sin ninguna de las funciones de nube
+      (respaldo, Yape automático, IA) — toda tu información quedaría solo en tu equipo.</li>
+    <li>Puedes pedir acceso, corrección o eliminación de los datos que tengamos sobre tu negocio escribiendo a
+      <a href="mailto:ksuarezq5@gmail.com">ksuarezq5@gmail.com</a>.</li>
+    <li>El respaldo local descargable (JSON) te permite exportar y controlar tu propia copia de los datos en
+      cualquier momento desde Configuración.</li>
+  </ul>
+
+  <h2>6. Menores de edad</h2>
+  <p>VentaPro es una herramienta de gestión para negocios y no está dirigida a niños. No recopilamos a sabiendas
+    información de menores de 13 años.</p>
+
+  <h2>7. Seguridad</h2>
+  <p>Las conexiones a nuestros servidores usan HTTPS. El acceso a tu base de datos en la nube está protegido por tu
+    código de activación único; las claves administrativas (como la del generador de códigos) nunca se incluyen en
+    la app que reciben tus clientes.</p>
+
+  <h2>8. Cambios a esta política</h2>
+  <p>Si actualizamos esta política, publicaremos la nueva versión en esta misma página con la fecha de
+    actualización al inicio.</p>
+
+  <h2>9. Contacto</h2>
+  <p>¿Dudas sobre esta política o sobre tus datos? Escríbenos a
+    <a href="mailto:ksuarezq5@gmail.com">ksuarezq5@gmail.com</a>.</p>
+
+  <a class="back" href="/">← Volver a VentaPro</a>
+
+  <footer>© 2026 KS Systems &amp; Innovations. VentaPro / NexusPOS.</footer>
+</div>
+</body>
+</html>
