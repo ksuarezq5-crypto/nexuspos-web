@@ -1,10 +1,11 @@
-import { Wrench, Router, Globe, Code2, LifeBuoy, Check } from "lucide-react";
+import { Wrench, Router, Globe, Code2, LifeBuoy, Megaphone, Nfc, Check } from "lucide-react";
 import Reveal from "./Reveal";
 
 export const SERVICES = [
   {
     icon: Wrench,
     title: "Soporte técnico y mantenimiento de computadoras",
+    image: "/servicios/soporte.jpg",
     items: [
       "Mantenimiento preventivo y correctivo de PC y laptops",
       "Instalación y configuración de Windows y programas",
@@ -15,6 +16,7 @@ export const SERVICES = [
   {
     icon: Router,
     title: "Redes y conectividad",
+    image: "/servicios/redes.jpg",
     items: [
       "Instalación y configuración de redes empresariales",
       "Configuración de routers, switches y puntos de acceso",
@@ -25,6 +27,7 @@ export const SERVICES = [
   {
     icon: Globe,
     title: "Desarrollo de páginas web",
+    image: "/servicios/web.jpg",
     items: [
       "Diseño de páginas web para negocios y emprendedores",
       "Landing pages para promocionar productos y servicios",
@@ -35,6 +38,7 @@ export const SERVICES = [
   {
     icon: Code2,
     title: "Desarrollo de sistemas y software empresarial",
+    image: "/servicios/software.jpg",
     items: [
       "Sistemas de ventas, inventario y control de caja",
       "Software de escritorio y aplicaciones multiplataforma",
@@ -46,11 +50,42 @@ export const SERVICES = [
   {
     icon: LifeBuoy,
     title: "Asistencia informática para empresas",
+    image: "/servicios/asistencia.jpg",
     items: [
       "Soporte técnico remoto y presencial",
       "Instalación y configuración de equipos de trabajo",
       "Resolución de incidencias informáticas",
       "Mantenimiento de equipos y asistencia a usuarios",
+    ],
+  },
+  {
+    icon: Megaphone,
+    title: "Marketing digital y publicidad para negocios",
+    image: "/servicios/marketing.jpg",
+    items: [
+      "Gestión y creación de contenido para redes sociales",
+      "Diseño de anuncios publicitarios y piezas gráficas",
+      "Creación y configuración de campañas publicitarias en Facebook e Instagram",
+      "Promoción de negocios y productos por internet",
+      "Diseño de estrategias para atraer clientes potenciales",
+      "Integración de WhatsApp Business en páginas web y anuncios",
+      "Creación de catálogos digitales para productos y servicios",
+      "Optimización de la presencia digital de pequeños negocios",
+    ],
+  },
+  {
+    icon: Nfc,
+    title: "Tarjetas digitales NFC y códigos QR",
+    image: "/servicios/tarjetas-nfc-qr.jpg",
+    items: [
+      "Diseño de tarjetas de presentación digitales",
+      "Tarjetas NFC para compartir contactos con un solo toque",
+      "Creación de tarjetas físicas con tecnología NFC",
+      "Generación de códigos QR personalizados para negocios",
+      "Códigos QR para WhatsApp, redes sociales, páginas web y catálogos digitales",
+      "Tarjetas con QR para restaurantes, tiendas, profesionales y emprendedores",
+      "Creación de perfiles digitales con información de contacto y enlaces",
+      "Integración de NFC y QR con páginas web empresariales",
     ],
   },
 ];
@@ -70,25 +105,30 @@ export default function Services() {
         </Reveal>
 
         <div className="mt-12 grid grid-cols-1 gap-5 md:grid-cols-2">
-          {SERVICES.map(({ icon: Icon, title, items }, i) => (
+          {SERVICES.map(({ icon: Icon, title, image, items }, i) => (
             <Reveal
               key={title}
               delay={(i % 4) * 90}
               className={i === SERVICES.length - 1 ? "md:col-span-2" : undefined}
             >
-              <div className="hover-lift glass-card h-full rounded-3xl p-6 transition hover:bg-white/[0.04]">
-                <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-violet-accent/15 text-violet-accent">
-                  <Icon size={20} />
+              <div className="hover-lift glass-card h-full overflow-hidden rounded-3xl transition hover:bg-white/[0.04]">
+                <div className="h-40 w-full overflow-hidden">
+                  <img src={image} alt={title} className="h-full w-full object-cover" loading="lazy" />
                 </div>
-                <h3 className="mt-4 text-base font-bold text-white">{title}</h3>
-                <ul className={i === SERVICES.length - 1 ? "mt-4 grid grid-cols-1 gap-2 sm:grid-cols-2" : "mt-4 space-y-2"}>
-                  {items.map((item) => (
-                    <li key={item} className="flex items-start gap-2 text-[13px] leading-relaxed text-ink-300">
-                      <Check size={14} className="mt-0.5 shrink-0 text-brand-400" />
-                      {item}
-                    </li>
-                  ))}
-                </ul>
+                <div className="p-6">
+                  <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-violet-accent/15 text-violet-accent">
+                    <Icon size={20} />
+                  </div>
+                  <h3 className="mt-4 text-base font-bold text-white">{title}</h3>
+                  <ul className={i === SERVICES.length - 1 ? "mt-4 grid grid-cols-1 gap-2 sm:grid-cols-2" : "mt-4 space-y-2"}>
+                    {items.map((item) => (
+                      <li key={item} className="flex items-start gap-2 text-[13px] leading-relaxed text-ink-300">
+                        <Check size={14} className="mt-0.5 shrink-0 text-brand-400" />
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
               </div>
             </Reveal>
           ))}
