@@ -111,23 +111,25 @@ export default function Services() {
               delay={(i % 4) * 90}
               className={i === SERVICES.length - 1 ? "md:col-span-2" : undefined}
             >
-              <div className="hover-lift glass-card h-full overflow-hidden rounded-3xl transition hover:bg-white/[0.04]">
-                <div className="aspect-square w-full overflow-hidden bg-ink-900/60">
-                  <img src={image} alt={title} className="h-full w-full object-contain" loading="lazy" />
-                </div>
-                <div className="p-6">
-                  <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-violet-accent/15 text-violet-accent">
-                    <Icon size={20} />
+              <div className="hover-lift glass-card h-full rounded-3xl p-6 transition hover:bg-white/[0.04]">
+                <div className="flex flex-col gap-5 sm:flex-row sm:items-start">
+                  <div className="h-28 w-28 shrink-0 overflow-hidden rounded-2xl bg-ink-900/60 sm:h-32 sm:w-32">
+                    <img src={image} alt={title} className="h-full w-full object-contain" loading="lazy" />
                   </div>
-                  <h3 className="mt-4 text-base font-bold text-white">{title}</h3>
-                  <ul className={i === SERVICES.length - 1 ? "mt-4 grid grid-cols-1 gap-2 sm:grid-cols-2" : "mt-4 space-y-2"}>
-                    {items.map((item) => (
-                      <li key={item} className="flex items-start gap-2 text-[13px] leading-relaxed text-ink-300">
-                        <Check size={14} className="mt-0.5 shrink-0 text-brand-400" />
-                        {item}
-                      </li>
-                    ))}
-                  </ul>
+                  <div className="min-w-0 flex-1">
+                    <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-violet-accent/15 text-violet-accent">
+                      <Icon size={20} />
+                    </div>
+                    <h3 className="mt-4 text-base font-bold text-white">{title}</h3>
+                    <ul className={i === SERVICES.length - 1 ? "mt-4 grid grid-cols-1 gap-2 sm:grid-cols-2" : "mt-4 space-y-2"}>
+                      {items.map((item) => (
+                        <li key={item} className="flex items-start gap-2 text-[13px] leading-relaxed text-ink-300">
+                          <Check size={14} className="mt-0.5 shrink-0 text-brand-400" />
+                          {item}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
                 </div>
               </div>
             </Reveal>
