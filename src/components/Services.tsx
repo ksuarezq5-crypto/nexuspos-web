@@ -112,8 +112,8 @@ export default function Services() {
               className={i === SERVICES.length - 1 ? "md:col-span-2" : undefined}
             >
               <div className="hover-lift glass-card h-full overflow-hidden rounded-3xl transition hover:bg-white/[0.04]">
-                <div className="h-40 w-full overflow-hidden">
-                  <img src={image} alt={title} className="h-full w-full object-cover" loading="lazy" />
+                <div className="aspect-square w-full overflow-hidden bg-ink-900/60">
+                  <img src={image} alt={title} className="h-full w-full object-contain" loading="lazy" />
                 </div>
                 <div className="p-6">
                   <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-violet-accent/15 text-violet-accent">
