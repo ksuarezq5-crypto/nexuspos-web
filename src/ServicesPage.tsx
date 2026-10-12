@@ -1,6 +1,6 @@
 import Nav from "./components/Nav";
 import Services from "./components/Services";
-import ContactForm from "./components/ContactForm";
+import ServiceQuoteForm from "./components/ServiceQuoteForm";
 import Footer from "./components/Footer";
 
 export default function ServicesPage() {
@@ -9,7 +9,7 @@ export default function ServicesPage() {
       <Nav />
       <main>
         <Services />
-        <ContactForm />
+        <ServiceQuoteForm />
       </main>
       <Footer />
     </div>
