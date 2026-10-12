@@ -1,7 +1,7 @@
 import { Wrench, Router, Globe, Code2, LifeBuoy, Check } from "lucide-react";
 import Reveal from "./Reveal";
 
-const SERVICES = [
+export const SERVICES = [
   {
     icon: Wrench,
     title: "Soporte técnico y mantenimiento de computadoras",

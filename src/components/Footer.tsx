@@ -1,4 +1,6 @@
-import { Zap } from "lucide-react";
+import { useEffect, useRef, useState } from "react";
+import { Zap, ChevronRight } from "lucide-react";
+import { SERVICES } from "./Services";
 
 const PRODUCT_LINKS = [
   { href: "#funciones", label: "Funciones" },
@@ -7,7 +9,24 @@ const PRODUCT_LINKS = [
   { href: "#faq", label: "Preguntas frecuentes" },
 ];
 
-export default function Footer() {
+export default function Footer({ onOpenServices }: { onOpenServices?: () => void }) {
+  const [servicesOpen, setServicesOpen] = useState(false);
+  const wrapRef = useRef<HTMLLIElement>(null);
+
+  useEffect(() => {
+    if (!servicesOpen) return;
+    function onClickOutside(e: MouseEvent) {
+      if (wrapRef.current && !wrapRef.current.contains(e.target as Node)) setServicesOpen(false);
+    }
+    document.addEventListener("mousedown", onClickOutside);
+    return () => document.removeEventListener("mousedown", onClickOutside);
+  }, [servicesOpen]);
+
+  function handleSelectServices() {
+    setServicesOpen(false);
+    onOpenServices?.();
+  }
+
   return (
     <footer className="border-t border-white/5 px-5 py-14">
       <div className="mx-auto grid max-w-6xl grid-cols-1 gap-10 sm:grid-cols-3">
@@ -34,6 +53,44 @@ export default function Footer() {
                 </a>
               </li>
             ))}
+
+            {/* -- "Servicios" no vive en el scroll normal de la página: al hacer
+               clic aquí se despliega un menú lateral solo con los títulos, y
+               elegir uno revela la sección completa (con imágenes y detalle)
+               más arriba. -- */}
+            <li ref={wrapRef} className="relative">
+              <button
+                type="button"
+                onClick={() => setServicesOpen((o) => !o)}
+                aria-expanded={servicesOpen}
+                className="flex items-center gap-1 text-[13px] text-ink-300 transition hover:text-white"
+              >
+                Servicios
+                <ChevronRight size={12} className={servicesOpen ? "rotate-90 transition" : "transition"} />
+              </button>
+
+              {servicesOpen && (
+                <div className="absolute bottom-full left-0 z-20 mb-2 w-72 rounded-2xl border border-white/10 bg-ink-800 p-2 shadow-2xl sm:bottom-auto sm:left-full sm:top-1/2 sm:mb-0 sm:ml-3 sm:-translate-y-1/2">
+                  <p className="px-3 pb-1.5 pt-1 text-[10px] font-bold uppercase tracking-wide text-ink-500">
+                    Otros servicios que ofrecemos
+                  </p>
+                  <ul>
+                    {SERVICES.map(({ icon: Icon, title }) => (
+                      <li key={title}>
+                        <button
+                          type="button"
+                          onClick={handleSelectServices}
+                          className="flex w-full items-center gap-2.5 rounded-xl px-3 py-2 text-left text-[12.5px] text-ink-200 transition hover:bg-white/5 hover:text-white"
+                        >
+                          <Icon size={14} className="shrink-0 text-violet-accent" />
+                          {title}
+                        </button>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
+            </li>
           </ul>
         </div>
 
