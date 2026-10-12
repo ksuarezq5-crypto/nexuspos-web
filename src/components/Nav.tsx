@@ -4,6 +4,7 @@ import { Menu, X, Zap } from "lucide-react";
 const LINKS = [
   { href: "#funciones", label: "Funciones" },
   { href: "#planes", label: "Planes" },
+  { href: "#servicios", label: "Servicios" },
   { href: "#descargas", label: "Descargas" },
   { href: "#faq", label: "Preguntas" },
   { href: "#contacto", label: "Contacto" },

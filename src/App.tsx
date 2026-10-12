@@ -5,6 +5,7 @@ import Features from "./components/Features";
 import Screenshots from "./components/Screenshots";
 import HowItWorks from "./components/HowItWorks";
 import Plans from "./components/Plans";
+import Services from "./components/Services";
 import Downloads from "./components/Downloads";
 import FAQ from "./components/FAQ";
 import ContactForm from "./components/ContactForm";
@@ -21,6 +22,7 @@ export default function App() {
         <Screenshots />
         <HowItWorks />
         <Plans />
+        <Services />
         <Downloads />
         <FAQ />
         <ContactForm />
