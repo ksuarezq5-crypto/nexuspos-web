@@ -2,11 +2,11 @@ import { useState } from "react";
 import { Menu, X, Zap } from "lucide-react";
 
 const LINKS = [
-  { href: "#funciones", label: "Funciones" },
-  { href: "#planes", label: "Planes" },
-  { href: "#descargas", label: "Descargas" },
-  { href: "#faq", label: "Preguntas" },
-  { href: "#contacto", label: "Contacto" },
+  { href: "/#funciones", label: "Funciones" },
+  { href: "/#planes", label: "Planes" },
+  { href: "/#descargas", label: "Descargas" },
+  { href: "/#faq", label: "Preguntas" },
+  { href: "/#contacto", label: "Contacto" },
 ];
 
 export default function Nav() {
@@ -15,7 +15,7 @@ export default function Nav() {
   return (
     <header className="sticky top-0 z-50 border-b border-white/5 bg-ink-950/80 backdrop-blur-md">
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-5">
-        <a href="#top" className="flex items-center gap-2 font-extrabold tracking-tight text-white">
+        <a href="/" className="flex items-center gap-2 font-extrabold tracking-tight text-white">
           <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-to-br from-brand-400 to-brand-600">
             <Zap size={16} className="text-ink-950" />
           </span>
